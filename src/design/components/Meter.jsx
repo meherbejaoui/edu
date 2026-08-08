@@ -3,7 +3,7 @@ export default function Meter({ label, value, color, word, reduced, width = 120 
     <div
       role="status"
       aria-label={word ? `${label} ${word}` : `${label} ${value}`}
-      style={{ display: "flex", alignItems: "center", gap: 10, opacity: 0.85 }}
+      style={{ display: "flex", alignItems: "center", gap: 10, opacity: 0.85, minWidth: 0 }}
     >
       <span
         style={{
@@ -12,6 +12,8 @@ export default function Meter({ label, value, color, word, reduced, width = 120 
           letterSpacing: "0.12em",
           textTransform: "uppercase",
           color: "var(--faint)",
+          whiteSpace: "nowrap",
+          flexShrink: 0,
         }}
       >
         {label}
@@ -20,6 +22,7 @@ export default function Meter({ label, value, color, word, reduced, width = 120 
         style={{
           position: "relative",
           width,
+          flexShrink: 0,
           height: 3,
           background: "var(--hair)",
           borderRadius: 2,
