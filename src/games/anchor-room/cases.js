@@ -3,6 +3,9 @@
   Reconstructed verbatim from the deployed minified bundle (edu/index.html,
   commit 7799533). Content and structure preserved exactly; only the visual
   layer was rebuilt onto the shared edu design system.
+
+  This file's narrative content (not the surrounding code) is licensed
+  under CC BY-NC-SA 4.0 — see /LICENSE-CONTENT.md.
 */
 
 export const CASES = [

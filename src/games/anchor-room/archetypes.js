@@ -1,4 +1,5 @@
 // Leadership Signature archetype bank, keyed by minimum anchored ratio.
+// Narrative content licensed under CC BY-NC-SA 4.0 — see /LICENSE-CONTENT.md.
 export const ARCHETYPES = [
   {
     "minRatio": 0.8,

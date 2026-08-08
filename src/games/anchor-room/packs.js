@@ -1,4 +1,6 @@
 // The four dockets a session can be built from (case groupings).
+// Narrative content (names/taglines/descriptions) licensed under
+// CC BY-NC-SA 4.0 — see /LICENSE-CONTENT.md.
 export const PACKS = [
   {
     "id": "foundations",
