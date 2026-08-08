@@ -22,13 +22,12 @@ export default function Title({ onStart }) {
       </h1>
       <p
         style={{
-          fontFamily: "var(--serif)",
-          fontSize: 19,
+          fontFamily: "var(--sans)",
+          fontSize: 17,
           lineHeight: 1.6,
           color: "var(--muted)",
           maxWidth: 520,
           margin: "26px auto 0",
-          fontStyle: "italic",
         }}
       >
         Two people who can no longer reach each other. Every line passes through

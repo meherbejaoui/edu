@@ -133,9 +133,9 @@ function BeatView({ beat, kase, heat, revealed, reads, onRead, onChoose, seed, r
               className="eg-focus eg-render"
               style={{
                 textAlign: "left",
-                background: "var(--surface)",
-                border: "1px solid var(--hair)",
-                borderRadius: "var(--radius)",
+                background: "var(--card-bg)",
+                border: "1px solid var(--card-border)",
+                borderRadius: "var(--radius-lg)",
                 padding: "14px 16px",
                 cursor: "pointer",
                 fontFamily: "var(--serif)",
@@ -185,9 +185,9 @@ function PressureView({ pr, kase, onChoose, reduced }) {
             className="eg-focus eg-render"
             style={{
               textAlign: "left",
-              background: "var(--surface)",
-              border: "1px solid var(--hair)",
-              borderRadius: "var(--radius)",
+              background: "var(--card-bg)",
+              border: "1px solid var(--card-border)",
+              borderRadius: "var(--radius-lg)",
               padding: "14px 16px",
               cursor: "pointer",
               fontFamily: "var(--serif)",
