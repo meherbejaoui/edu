@@ -1,0 +1,37 @@
+/* Game-specific functional accent colors for The Interpreter, layered on
+   top of the shared neutral design system (src/design/tokens.css). These
+   encode meaning within this game — who is speaking, how hot the room
+   is — so they live here rather than in the shared token set. */
+:root {
+  --ir-a: #9c6b3e; /* party A — amber */
+  --ir-atint: #f3ece2;
+  --ir-b: #3e7a80; /* party B — teal */
+  --ir-btint: #e4edee;
+  --ir-cool: #7c93a8; /* heat axis, low */
+  --ir-hot: #b4553f; /* heat axis, high */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ir-a: #c99a68;
+    --ir-atint: #2c2419;
+    --ir-b: #6fa8ad;
+    --ir-btint: #16262a;
+    --ir-cool: #9cb2c6;
+    --ir-hot: #d97a66;
+  }
+}
+
+@media (max-width: 560px) {
+  .ir-recon {
+    grid-template-columns: 1fr !important;
+  }
+  .ir-recon > div:nth-child(2) {
+    display: none !important;
+  }
+  .ir-recon > div:nth-child(3) {
+    text-align: left !important;
+    padding-left: 0 !important;
+    margin-top: 4px;
+  }
+}

@@ -1,0 +1,130 @@
+/* Shared design tokens for the edu games.
+   Neutral, editorial, serif-forward base — light by default, dark via
+   prefers-color-scheme. Each game may layer its own functional accent
+   colors (party colors, status tags) on top of this neutral base. */
+
+:root {
+  --bg: #e9eaec;
+  --surface: #fbfbf9;
+  --surface-raised: #ffffff;
+  --ink: #23262b;
+  --muted: #54595f;
+  --faint: #676c72;
+  --hair: #d3d5d8;
+
+  --danger: #b4553f;
+  --safe: #4c7a50;
+  --cool: #7c93a8;
+
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, monospace;
+
+  --radius-sm: 8px;
+  --radius: 10px;
+  --radius-lg: 14px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --content-width: 720px;
+  --content-width-wide: 1000px;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17181b;
+    --surface: #1f2124;
+    --surface-raised: #24262a;
+    --ink: #ecedee;
+    --muted: #b7bbc0;
+    --faint: #8c9096;
+    --hair: #33363b;
+
+    --danger: #d97a66;
+    --safe: #7bab7e;
+    --cool: #9cb2c6;
+
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.eg-focus:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.eg-card:hover,
+.eg-render:hover {
+  border-color: var(--ink) !important;
+}
+.eg-render:hover {
+  transform: translateY(-1px);
+}
+.eg-render {
+  transition: transform 140ms ease, border-color 140ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .eg-render:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@keyframes eg-carry {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes eg-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
