@@ -3,6 +3,9 @@
   A text-based decision game about the moral act of translation.
   Content-authored (no API). Companion to The Anchor Room.
 
+  This file's narrative content (not the surrounding code) is licensed
+  under CC BY-NC-SA 4.0 — see /LICENSE-CONTENT.md.
+
   A "beat" is one line of dialogue you must carry across. Each beat has:
     speaker   'A' | 'B'          who is talking (the other party is the receiver)
     src       string | {cool,warm,hot}   what they actually say. Give a single
