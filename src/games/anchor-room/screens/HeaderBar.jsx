@@ -20,10 +20,10 @@ export default function HeaderBar({ chapter, caseLabel, steadiness, maxStead, vo
             {caseLabel} · {chapter.title}
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 26 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 20, flexWrap: "wrap" }}>
           <div style={{ textAlign: "center" }} title="Conversations taken this case — quiet voices you skip become blind spots">
-            <div style={{ fontFamily: "var(--sans)", fontSize: 11, letterSpacing: "0.08em", color: "var(--faint)", marginBottom: 3 }}>
-              voices · this case
+            <div style={{ fontFamily: "var(--sans)", fontSize: 11, letterSpacing: "0.08em", color: "var(--faint)", marginBottom: 3, whiteSpace: "nowrap" }}>
+              voices heard
             </div>
             <div style={{ fontFamily: "var(--serif)", fontSize: 24, color: "var(--anr-anchor)", fontWeight: 700, lineHeight: 1 }}>
               {voicesHeard}
