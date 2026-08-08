@@ -4,8 +4,8 @@ export default function Card({ as: As = "div", accent, interactive, style, class
       type={As === "button" ? "button" : undefined}
       className={`${interactive ? "eg-focus eg-card" : ""} ${className}`}
       style={{
-        background: "var(--surface)",
-        border: "1px solid var(--hair)",
+        background: "var(--card-bg)",
+        border: "1px solid var(--card-border)",
         borderLeft: accent ? `4px solid ${accent}` : undefined,
         borderRadius: "var(--radius-lg)",
         padding: "18px 20px",

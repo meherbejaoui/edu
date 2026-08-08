@@ -46,13 +46,12 @@ export default function LandingApp() {
         <h1 style={{ ...h1, marginTop: 10 }}>Edu</h1>
         <p
           style={{
-            fontFamily: "var(--serif)",
-            fontSize: 19,
+            fontFamily: "var(--sans)",
+            fontSize: 17,
             lineHeight: 1.6,
             color: "var(--muted)",
             maxWidth: 640,
             margin: "18px 0 0",
-            fontStyle: "italic",
           }}
         >
           Short, text-based games about the choices people make under pressure —

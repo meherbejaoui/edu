@@ -16,13 +16,20 @@
   --safe: #4c7a50;
   --cool: #7c93a8;
 
+  /* neutral gray-alpha card surface — theme-agnostic by design, matches
+     the cards at meherbejaoui.com/projects/sandbox exactly */
+  --card-bg: rgba(127, 127, 127, 0.06);
+  --card-bg-hover: rgba(127, 127, 127, 0.1);
+  --card-border: rgba(127, 127, 127, 0.3);
+  --card-border-hover: rgba(127, 127, 127, 0.55);
+
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
   --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, monospace;
 
   --radius-sm: 8px;
   --radius: 10px;
-  --radius-lg: 14px;
+  --radius-lg: 1rem;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -86,17 +93,21 @@ a {
   border-radius: var(--radius-sm);
 }
 
-.eg-card:hover,
-.eg-render:hover {
-  border-color: var(--ink) !important;
-}
-.eg-render:hover {
-  transform: translateY(-1px);
-}
+.eg-card,
 .eg-render {
-  transition: transform 140ms ease, border-color 140ms ease;
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+.eg-card:hover,
+.eg-card:focus-visible,
+.eg-render:hover,
+.eg-render:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  border-color: var(--card-border-hover) !important;
+  background: var(--card-bg-hover) !important;
 }
 @media (prefers-reduced-motion: reduce) {
+  .eg-card:hover,
   .eg-render:hover {
     transform: none;
   }

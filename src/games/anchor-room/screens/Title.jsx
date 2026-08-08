@@ -20,8 +20,8 @@ export default function Title({ onEnter }) {
       </h1>
       <p
         style={{
-          fontFamily: "var(--serif)",
-          fontSize: 18,
+          fontFamily: "var(--sans)",
+          fontSize: 17,
           lineHeight: 1.7,
           color: "var(--muted)",
           maxWidth: 580,
