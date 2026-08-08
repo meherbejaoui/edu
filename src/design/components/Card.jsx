@@ -6,7 +6,6 @@ export default function Card({ as: As = "div", accent, interactive, style, class
       style={{
         background: "var(--card-bg)",
         border: "1px solid var(--card-border)",
-        borderLeft: accent ? `4px solid ${accent}` : undefined,
         borderRadius: "var(--radius-lg)",
         padding: "18px 20px",
         textAlign: "left",
@@ -17,6 +16,11 @@ export default function Card({ as: As = "div", accent, interactive, style, class
         color: "inherit",
         textDecoration: As === "a" ? "none" : undefined,
         display: As === "a" ? "block" : undefined,
+        // only touch borderLeft when there IS an accent — setting it to
+        // `undefined` otherwise makes React clear the border-left-* it just
+        // inherited from the `border` shorthand above, exposing the
+        // browser's default <button> border on that one edge.
+        ...(accent ? { borderLeft: `4px solid ${accent}` } : {}),
         ...style,
       }}
       {...props}
