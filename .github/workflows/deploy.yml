@@ -9,8 +9,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: 'pages'
@@ -18,6 +16,13 @@ concurrency:
 
 jobs:
   build:
+    # No pages/id-token permissions here: this job also runs pnpm install +
+    # pnpm build on pull_request events, including from external contributors
+    # on this public repo. It has no business holding write-scoped tokens
+    # while executing code from an untrusted PR — only the deploy job,
+    # which never runs on pull_request, needs them.
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

@@ -31,6 +31,7 @@ export default function KofiButton() {
 
     const script = document.createElement("script");
     script.src = "https://storage.ko-fi.com/cdn/scripts/overlay-widget.js";
+    script.referrerPolicy = "strict-origin-when-cross-origin";
     script.onload = () => {
       if (window.kofiWidgetOverlay) {
         window.kofiWidgetOverlay.draw("meherbejaoui", {
