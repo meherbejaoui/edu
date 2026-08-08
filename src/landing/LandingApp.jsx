@@ -1,25 +1,24 @@
 import Label from "../design/components/Label.jsx";
-import Card from "../design/components/Card.jsx";
 import { SiteFooter } from "../design/components/Shell.jsx";
 
 const games = [
   {
     href: "anchor-room/",
+    icon: "⚓",
     title: "The Anchor Room",
-    kicker: "public decisions",
-    tag: "11 cases · ~10 min each",
+    tag: "11 cases",
     hook:
       "An interactive decision game about leadership, pressure, and the choices beneath the surface of public debate.",
-    accent: "#b08a2e",
+    cta: "Play the game →",
   },
   {
     href: "the-interpreter/",
+    icon: "🗣️",
     title: "The Interpreter",
-    kicker: "carrying words across",
-    tag: "3 cases · ~10 min each",
+    tag: "3 cases",
     hook:
       "A text-based decision game about the moral act of translation. Two people who can no longer reach each other — every line passes through you.",
-    accent: "#3e7a80",
+    cta: "Play the game →",
   },
 ];
 
@@ -62,27 +61,15 @@ export default function LandingApp() {
           can live with.
         </p>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: 18,
-            marginTop: 44,
-          }}
-        >
+        <div id="game-cards">
           {games.map((g) => (
-            <Card as="a" key={g.href} href={g.href} interactive accent={g.accent} style={{ display: "block" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12, flexWrap: "wrap" }}>
-                <span style={{ fontFamily: "var(--serif)", fontSize: 26, color: "var(--ink)" }}>{g.title}</span>
-                <Label>{g.kicker}</Label>
-              </div>
-              <p style={{ fontFamily: "var(--sans)", fontSize: 14.5, lineHeight: 1.6, color: "var(--muted)", margin: "10px 0 0" }}>
-                {g.hook}
-              </p>
-              <div style={{ marginTop: 14 }}>
-                <Label color="var(--faint)">{g.tag}</Label>
-              </div>
-            </Card>
+            <a className="game-card" key={g.href} href={g.href}>
+              <div className="game-card-icon">{g.icon}</div>
+              <span className="game-card-tag">{g.tag}</span>
+              <div className="game-card-title">{g.title}</div>
+              <div className="game-card-desc">{g.hook}</div>
+              <div className="game-card-cta">{g.cta}</div>
+            </a>
           ))}
         </div>
       </main>

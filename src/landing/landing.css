@@ -1,0 +1,73 @@
+/* Card treatment matches meherbejaoui.com/projects/sandbox exactly —
+   same neutral gray-alpha tint (theme-agnostic by design), same hover
+   lift + shadow, same anatomy (icon, tag, title, desc, CTA). */
+
+#game-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2.75rem 0 0;
+}
+
+#game-cards a.game-card {
+  flex: 1 1 260px;
+  display: block;
+  padding: 1.75rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  text-decoration: none;
+  color: inherit;
+  background: rgba(127, 127, 127, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+#game-cards a.game-card:hover,
+#game-cards a.game-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  border-color: rgba(127, 127, 127, 0.55);
+  background: rgba(127, 127, 127, 0.1);
+}
+
+#game-cards .game-card-icon {
+  font-size: 2.25rem;
+  line-height: 1;
+  margin-bottom: 0.6rem;
+}
+
+#game-cards .game-card-title {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+#game-cards .game-card-tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(127, 127, 127, 0.15);
+  margin-bottom: 0.75rem;
+}
+
+#game-cards .game-card-desc {
+  opacity: 0.8;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+#game-cards .game-card-cta {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#game-cards a.game-card:hover .game-card-cta {
+  text-decoration: underline;
+}
