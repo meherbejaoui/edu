@@ -1,5 +1,6 @@
 import Label from "../design/components/Label.jsx";
 import { SiteFooter } from "../design/components/Shell.jsx";
+import KofiButton from "../design/components/KofiButton.jsx";
 
 const games = [
   {
@@ -73,6 +74,7 @@ export default function LandingApp() {
         </div>
       </main>
       <SiteFooter />
+      <KofiButton />
     </div>
   );
 }

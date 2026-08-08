@@ -32,7 +32,7 @@ export default function Title({ onEnter }) {
         the outside. Tonight, you're on the inside — where the pressure is
         personal, the data is quiet, and every choice is a loss to someone.
       </p>
-      <Card accent="var(--anr-push)" style={{ margin: "44px auto 0", maxWidth: 580, textAlign: "left" }}>
+      <Card style={{ margin: "44px auto 0", maxWidth: 580, textAlign: "left" }}>
         <Label color="var(--anr-push)">Rules of the chamber</Label>
         <div style={{ marginTop: 16, display: "grid", gap: 13, fontSize: 16, lineHeight: 1.62, color: "var(--ink)" }}>
           <div>

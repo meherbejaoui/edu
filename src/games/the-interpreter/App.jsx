@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { CASES } from "./cases.js";
 import { GameChrome, SiteFooter } from "../../design/components/Shell.jsx";
+import KofiButton from "../../design/components/KofiButton.jsx";
 import Title from "./screens/Title.jsx";
 import CaseSelect from "./screens/CaseSelect.jsx";
 import Intro from "./screens/Intro.jsx";
@@ -41,6 +42,7 @@ export default function TheInterpreter() {
       <GameChrome>
         <Title onStart={() => setScreen("select")} />
         <SiteFooter />
+        <KofiButton />
       </GameChrome>
     );
   }

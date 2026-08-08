@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import { CASES } from "./cases.js";
 import { computeSteadiness, maxSteadiness, DECIDE_SECONDS, HEAT_SECONDS, CONVERSATIONS_ALLOWED } from "./engine.js";
 import { GameChrome, SiteFooter } from "../../design/components/Shell.jsx";
+import KofiButton from "../../design/components/KofiButton.jsx";
 import HeaderBar from "./screens/HeaderBar.jsx";
 import TimerBar from "./screens/TimerBar.jsx";
 import Title from "./screens/Title.jsx";
@@ -138,7 +139,12 @@ export default function AnchorRoom() {
         />
       )}
 
-      {screen === "title" && <Title onEnter={() => setScreen("docket")} />}
+      {screen === "title" && (
+        <>
+          <Title onEnter={() => setScreen("docket")} />
+          <KofiButton />
+        </>
+      )}
       {screen === "docket" && <Docket timerEnabled={timerEnabled} onToggleTimer={setTimerEnabled} onPick={pickPack} />}
       {screen === "brief" && chapter && <Brief chapter={chapter} caseLabel={caseLabel} onBegin={() => setScreen("listen")} />}
       {screen === "listen" && chapter && (
