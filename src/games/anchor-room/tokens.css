@@ -1,0 +1,21 @@
+/* Game-specific functional accent colors for The Anchor Room, layered on
+   top of the shared neutral design system (src/design/tokens.css). Pushes
+   and anchors are the game's core vocabulary, so they keep a distinct pair
+   of colors; everything else (chrome, type, cards) is the shared system. */
+:root {
+  --anr-push: #b4553f; /* same hue family as shared --danger */
+  --anr-anchor: #ad8323; /* brass — the one deliberate nod to the old identity */
+  --anr-lens1: #3e6b8f; /* institutional / official lens */
+  --anr-lens2: #8e2620; /* street-level / affected lens */
+  --anr-quiet: #4c7a50; /* quiet voices heard */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --anr-push: #d97a66;
+    --anr-anchor: #d9b563;
+    --anr-lens1: #7ea3c4;
+    --anr-lens2: #c96b5e;
+    --anr-quiet: #7bab7e;
+  }
+}
