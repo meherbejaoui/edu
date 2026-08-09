@@ -1,5 +1,5 @@
 import Label from "../design/components/Label.jsx";
-import { SiteFooter } from "../design/components/Shell.jsx";
+import { SiteFooter, SiteHeader } from "../design/components/Shell.jsx";
 import KofiButton from "../design/components/KofiButton.jsx";
 
 const games = [
@@ -25,7 +25,7 @@ const games = [
 
 const h1 = {
   fontFamily: "var(--serif)",
-  fontSize: "clamp(36px, 7vw, 60px)",
+  fontSize: "var(--text-display)",
   lineHeight: 1.05,
   margin: 0,
   color: "var(--ink)",
@@ -36,6 +36,7 @@ const h1 = {
 export default function LandingApp() {
   return (
     <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
+      <SiteHeader />
       <main
         style={{
           maxWidth: "var(--content-width-wide)",

@@ -127,7 +127,7 @@ export default function AnchorRoom() {
   const showTimer = timerEnabled && (screen === "decide" || screen === "heat");
 
   return (
-    <GameChrome kicker={showHeader ? undefined : "The Anchor Room"}>
+    <GameChrome title="The Anchor Room" kicker={showHeader ? undefined : "The Anchor Room"}>
       {showHeader && (
         <HeaderBar
           chapter={chapter}
