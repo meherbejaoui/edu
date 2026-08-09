@@ -72,7 +72,7 @@ export default function KofiButton() {
           fontFamily: "var(--sans)",
           fontSize: 14,
           fontWeight: 500,
-          color: "#fff",
+          color: "#0a2a33",
           background: "#00b9fe",
           boxShadow: "0 8px 20px rgba(0,0,0,.25)",
           cursor: loading ? "wait" : "pointer",

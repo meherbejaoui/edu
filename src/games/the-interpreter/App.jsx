@@ -39,7 +39,7 @@ export default function TheInterpreter() {
 
   if (screen === "title") {
     return (
-      <GameChrome>
+      <GameChrome title="The Interpreter">
         <Title onStart={() => setScreen("select")} />
         <SiteFooter />
         <KofiButton />
@@ -48,7 +48,7 @@ export default function TheInterpreter() {
   }
 
   return (
-    <GameChrome kicker={kase && screen !== "select" ? kase.title : "The Interpreter"}>
+    <GameChrome title="The Interpreter" kicker={kase && screen !== "select" ? kase.title : "The Interpreter"}>
       {screen === "select" && <CaseSelect done={done} onPick={(id) => { setCaseId(id); setScreen("intro"); }} />}
       {screen === "intro" && kase && (
         <Intro kase={kase} onBack={() => setScreen("select")} onBegin={() => { setRunId((r) => r + 1); setScreen("play"); }} />
