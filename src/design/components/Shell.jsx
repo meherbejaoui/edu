@@ -49,7 +49,7 @@ export function SiteHeader({ crumbs = [] }) {
         <span aria-hidden="true" style={{ color: "var(--hair)", margin: "0 6px" }}>
           /
         </span>
-        <a href="/" className="eg-focus" style={{ color: "var(--muted)", textDecoration: "none" }}>
+        <a href="/edu/" className="eg-focus" style={{ color: "var(--muted)", textDecoration: "none" }}>
           edu
         </a>
         {crumbs.map((c, i) => (
@@ -148,8 +148,8 @@ export function SiteFooter() {
         Source
       </a>
       <span style={{ fontFamily: "var(--sans)", fontSize: 13, color: "var(--faint)" }}>
-        Code <a href="/LICENSE" className="eg-focus" style={{ color: "var(--faint)" }}>GPLv3</a> · Content{" "}
-        <a href="/LICENSE-CONTENT.md" className="eg-focus" style={{ color: "var(--faint)" }}>CC BY-NC-SA 4.0</a>
+        Code <a href="https://github.com/meherbejaoui/edu/blob/main/LICENSE" className="eg-focus" style={{ color: "var(--faint)" }}>GPLv3</a> · Content{" "}
+        <a href="https://github.com/meherbejaoui/edu/blob/main/LICENSE-CONTENT.md" className="eg-focus" style={{ color: "var(--faint)" }}>CC BY-NC-SA 4.0</a>
       </span>
     </footer>
   );
