@@ -63,7 +63,7 @@ const REPO = "https://github.com/meherbejaoui/edu";
 
 function footer() {
   return `<footer class="sf-foot">
-<p>Games by Meher Bejaoui, built with Claude. <a href="https://www.meherbejaoui.com/">meherbejaoui.com</a> · <a href="${REPO}">Source</a> · Code <a href="${REPO}/blob/main/LICENSE">GPLv3</a> · Content <a href="${REPO}/blob/main/LICENSE-CONTENT.md">CC BY-NC-SA 4.0</a></p>
+<p>Games by Meher Bejaoui, built with Claude. <a href="https://www.meherbejaoui.com/">meherbejaoui.com</a> · <a href="https://www.meherbejaoui.com/contact/">Contact</a> · <a href="https://www.meherbejaoui.com/terms/">Terms &amp; Privacy</a> · <a href="${REPO}">Source</a> · Code <a href="${REPO}/blob/main/LICENSE">GPLv3</a> · Content <a href="${REPO}/blob/main/LICENSE-CONTENT.md">CC BY-NC-SA 4.0</a></p>
 <p>These games are interactive and need JavaScript to play. This page lists what each one contains.</p>
 </footer>`;
 }
